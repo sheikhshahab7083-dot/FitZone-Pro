@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitZone Pro</title>
+
+  <style>
+    /* 🔹 Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* 🔹 Navbar */
+    nav {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: #00e5ff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav ul li:hover {
+      color: #00e5ff;
+      transform: scale(1.1);
+    }
+
+    /* 🔹 Hero Section */
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(120deg, #00bcd4, #2196f3, #00e5ff);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      animation: fadeIn 3s ease;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #2196f3;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.4s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .hero button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #00e5ff;
+    }
+
+    /* 🔹 Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 80px 50px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: 0.5s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(0, 229, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #00e5ff;
+    }
+
+    .card p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* 🔹 Footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      color: #ccc;
+    }
+
+    /* 🔹 Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>FitZone</h1>
+    <ul>
+      <li>Home</li>
+      <li>Plans</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h2>Transform Your Fitness Journey</h2>
+    <p>Track workouts, diet and progress — all in one place.</p>
+    <button>🚀 Download Now</button>
+  </header>
+
+  <section class="features">
+    <div class="card">
+      <h3>🔥 Track Calories</h3>
+      <p>Monitor your daily intake with AI-powered insights.</p>
+    </div>
+    <div class="card">
+      <h3>💪 Daily Workouts</h3>
+      <p>Customized workout plans for every goal.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Progress Reports</h3>
+      <p>See your achievements with dynamic charts.</p>
+    </div>
+  </section>
+
+  <footer>© 2025 FitZone Pro | Designed for Champions 💥</footer>
+</body>
+</html>
